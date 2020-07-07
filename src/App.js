@@ -4,29 +4,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Button } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from "react-router-dom";
 import CustomNavbar from './components/Navgation';
 import Home from './components/home/Index';
+import Footer from './components/Footer';
 import About from './components/About';
-import Carousel from './components/Carousel';
-
-// import News from './components/News';
+import Contact from './components/Contact';
+import Receipe from './components/Receipe';
 import './App.css';
 
 
 function App() {
   return (
-    
-      
       <Router>
-        
         <div>
           <CustomNavbar />
-          <Carousel />
           
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/receipes" component={Receipe} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
+
+          <Footer />
         </div>
         
       </Router>
