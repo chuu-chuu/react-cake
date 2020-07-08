@@ -541,6 +541,34 @@ $light-color: #fff;
     }
 }
 
+.contact {
+    .contact__form {
+        box-shadow: 5px 10px 10px 5px #ccc;
+        h4 {
+            font-family: $subtitle-font-style;
+        }
+        .form-control {
+            background: #ccc;
+            padding: 1.5em;
+            
+            &:focus {
+                border-color: $primary-color;
+                box-shadow: none;
+            }
+        }
+        button {
+            background: $primary-color;
+            color: $light-color;
+            padding: 0.5em 1.5em;
+            &:hover {
+                background-color: $secondary-color;
+                border-color: $secondary-color;
+            }
+        }
+    }
+}
+ 
+
 
 
 
