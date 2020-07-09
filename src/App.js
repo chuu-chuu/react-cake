@@ -13,6 +13,8 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
 import Receipe from './components/Receipe';
+import Login from './components/Login';
+import Register from './components/Register';
 import './App.css';
 
 
@@ -27,6 +29,8 @@ function App() {
             <Route exact path="/receipes" component={Receipe} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
           </Switch>
 
           <Footer />

@@ -25,6 +25,28 @@ $light-color: #fff;
     margin-bottom: 1em;
 }
 
+.topbar {
+    background: #f7054f54;
+
+    .topbar__phone {
+        color: $primary-color;
+    }
+
+    .topbar__link {
+        span {
+            color: $secondary-color;
+        }
+        a {
+            color: $primary-color;
+            &:hover {
+                color: $secondary-color;
+                text-decoration: none;
+            }
+        }
+    }
+   
+}
+
 .navbar {
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.33);
     position: sticky;
@@ -42,11 +64,14 @@ $light-color: #fff;
               color: $secondary-color!important;  
             }
         }
+        .active {
+            color: $secondary-color!important;
+        }
     }
 }
 
 .logo {
-    width: 100px;
+    width: 90px;
     height: 85px;
     display: block;
 
@@ -564,6 +589,15 @@ $light-color: #fff;
                 background-color: $secondary-color;
                 border-color: $secondary-color;
             }
+        }
+    }
+
+    .contact__info {
+        h5 {
+            font-family: $title-font-style;
+        }
+        p {
+            color: #656464;
         }
     }
 }
