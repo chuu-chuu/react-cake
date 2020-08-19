@@ -1,6 +1,7 @@
 import React from 'react';
 import Breadcrumb from './Breadcrumb';
 import {Container, Col, Button, Row, Form, Image} from 'react-bootstrap';
+import '../component.scss';
 
 function Contact() {
     return(

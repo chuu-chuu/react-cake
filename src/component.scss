@@ -5,7 +5,8 @@ $align-title: center;
 $primary-color: #f63570;
 $secondary-color: #e47d00;
 $dark-color: #0e0e0e;
-$light-color: #fff;
+$light-color: #f2f2f2;
+$bg-color: #ccc;
 
 @mixin image {
     width: 100%;
@@ -24,6 +25,21 @@ $light-color: #fff;
     color: $secondary-color;
     margin-bottom: 1em;
 }
+
+@mixin before-after {
+    width: 100px;
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: $primary-color;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+
+
+
 
 .topbar {
     background: #f7054f54;
@@ -568,12 +584,12 @@ $light-color: #fff;
 
 .contact {
     .contact__form {
-        box-shadow: 5px 10px 10px 5px #ccc;
+        box-shadow: 5px 10px 10px 5px $bg-color;
         h4 {
             font-family: $subtitle-font-style;
         }
         .form-control {
-            background: #ccc;
+            background: $bg-color;
             padding: 1.5em;
             
             &:focus {
@@ -601,7 +617,34 @@ $light-color: #fff;
         }
     }
 }
- 
+ .login {
+    h3 {
+
+        &::before {
+            left: 25%;
+            @include before-after;
+            
+        }
+        &::after {
+            left: 75%;
+            @include before-after;
+            
+        }
+        
+    }
+    .login-form {
+        box-shadow: 5px 10px 10px 5px $bg-color;
+    }
+    .form-control {
+         background: $bg-color;
+         padding: 1.5em;
+    }
+    .btn {
+        background: $primary-color;
+        color: $light-color;
+        padding: 0.5em 1.5em;
+    }
+ }
 
 
 
